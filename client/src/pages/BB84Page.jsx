@@ -1,8 +1,8 @@
 import React, { useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = "http://localhost:5000";
-
+// const API_BASE = "http://localhost:5000";
+const API_BASE = "https://fastapi-pi-three.vercel.app";
 // helpers
 const basisLabel = (b) => (b === 0 ? "Z" : "X");
 const angleLabel = (a) => `${a}°`;
