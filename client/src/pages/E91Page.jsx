@@ -97,7 +97,7 @@ export default function E91Page() {
 
   /** ---- API calls ---- */
   async function apiStartE91({ target_n, chunk_size }) {
-    const resp = await fetch(`${API_BASE}/api/e91/start`, {
+    const resp = await fetch(`${API_BASE}/e91/start`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -114,7 +114,7 @@ export default function E91Page() {
   }
 
   async function apiStepE91(sid) {
-    const resp = await fetch(`${API_BASE}/api/e91/step/${sid}`, {
+    const resp = await fetch(`${API_BASE}/e91/step/${sid}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });
