@@ -70,12 +70,20 @@ def e91_step(session_id: str):
         raise HTTPException(status_code=404, detail="session not found")
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+        
 from fastapi.middleware.cors import CORSMiddleware
+
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "https://YOUR-VERCEL-APP.vercel.app",
+    # If you have a custom domain, add it too:
+    # "https://yourdomain.com",
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_credentials=True,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=False,  # keep False unless you use cookies/auth
     allow_methods=["*"],
     allow_headers=["*"],
 )
