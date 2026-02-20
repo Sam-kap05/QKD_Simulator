@@ -118,7 +118,7 @@ export default function BB84() {
 
   /** ---- API calls ---- */
   async function apiStartBB84({ target_n, chunk_size }) {
-    const resp = await fetch(`${API_BASE}/api/bb84/start`, {
+    const resp = await fetch(`${API_BASE}/bb84/start`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -138,7 +138,7 @@ export default function BB84() {
 
 
   async function apiStepBB84(sid) {
-    const resp = await fetch(`${API_BASE}/api/bb84/step/${sid}`, {
+    const resp = await fetch(`${API_BASE}/bb84/step/${sid}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });
