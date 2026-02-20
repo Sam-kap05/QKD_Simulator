@@ -75,7 +75,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://YOUR-VERCEL-APP.vercel.app",
+    "https://qkd-simulator-1.onrender.com/",
     # If you have a custom domain, add it too:
     # "https://yourdomain.com",
 ]
