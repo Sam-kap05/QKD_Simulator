@@ -16,14 +16,16 @@ Interested users can go to [https://qkd-simulator.vercel.app/](https://qkd-simul
   - Choose a target key size
   - Iterative rounds of qubit preparation + measurement
   - Basis matching + sifting to form a raw key
-  - Eavesdropping/security check (QBER-style check, depending on implementation)
+  - Eavesdropping/security check (custom Eve strength + QBER check)
+  - Noise simulation (custom depolarizing probability)
   - Special thanks to [Ansh Goel](https://github.com/AnshGoel2425) for inspiration for the BB84 code (Python backend).
 
 - **E91 QKD Simulation**
   - Choose a target key size
   - Generation and distribution of entangled qubit pairs between Alice and Bob
   - Correlation analysis of measurement outcomes
-  - Bell inequality (CHSH) test to detect eavesdropping
+  - Bell inequality (CHSH) and QBER test to detect eavesdropping
+  - Noise simulation (custom depolarizing probability)
   - Secure key extraction from strongly correlated measurement results
  
 - **Read About Pages**
@@ -31,8 +33,8 @@ Interested users can go to [https://qkd-simulator.vercel.app/](https://qkd-simul
 
 - **Interactive UI**
   - Alice ↔ Quantum Channel ↔ Bob visual layout
+  - User-defined key sizes, Eve presence and Noise simulation
   - Key progress shown live as iterations run
-  - Clean routing for different protocol pages
 
 ---
 
@@ -40,7 +42,7 @@ Interested users can go to [https://qkd-simulator.vercel.app/](https://qkd-simul
 
 **Frontend**
 - React (Vite)
-- TypeScript
+- Javascript
 
 **Backend**
 - Python API (FastAPI)
